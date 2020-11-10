@@ -6,6 +6,30 @@ You can use the [editor on GitHub](https://github.com/voleer/pages-test-a/edit/g
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+## Steps
+
+### Step 1
+
+Download and install application from [Voleer Marketing Site](https://voleer.com/).
+
+### Step 2
+
+Run these commands in PowerShell console:
+
+```powershell
+>get-service dnscache | fl
+
+Name                : dnscache
+DisplayName         : DNS Client
+Status              : Running
+DependentServices   : {RemoteAccess, RasMan, NcaSvc}
+ServicesDependedOn  : {nsi, Afd}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+```
+
 ## Reference Information
 
 ### Markdown
