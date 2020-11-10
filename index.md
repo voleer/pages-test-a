@@ -17,17 +17,20 @@ Download and install application from [Voleer Marketing Site](https://voleer.com
 Run these commands in PowerShell console:
 
 ```powershell
->get-service dnscache | fl
+if ((Get-Date).DayOfWeek -eq 'Tuesday') {
+  get-service dnscache | fl
+}
 
-Name                : dnscache
-DisplayName         : DNS Client
-Status              : Running
-DependentServices   : {RemoteAccess, RasMan, NcaSvc}
-ServicesDependedOn  : {nsi, Afd}
-CanPauseAndContinue : False
-CanShutdown         : False
-CanStop             : False
-ServiceType         : Win32OwnProcess, Win32ShareProcess
+// Output:
+// Name                : dnscache
+// DisplayName         : DNS Client
+// Status              : Running
+// DependentServices   : {RemoteAccess, RasMan, NcaSvc}
+// ServicesDependedOn  : {nsi, Afd}
+// CanPauseAndContinue : False
+// CanShutdown         : False
+// CanStop             : False
+// ServiceType         : Win32OwnProcess, Win32ShareProcess
 ```
 
 ## Reference Information
